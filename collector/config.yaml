@@ -12,5 +12,5 @@ games:
 # Discord forwards don't carry the source channel name, so it is mapped here.
 # Entries whose key is still a <PLACEHOLDER> are ignored.
 origin_labels:
-  "<SXS_ANNOUNCEMENTS_CHANNEL_ID>": "Sword x Staff SEA #announcements"
-  "<SXS_SECRET_CODE_CHANNEL_ID>": "Sword x Staff SEA #secret-code"
+  "1546808159144910880": "Sword x Staff SEA #announcements"
+  "1539837391391432744": "Sword x Staff SEA #secret-code"

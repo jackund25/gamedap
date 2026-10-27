@@ -19,7 +19,7 @@ Personal gaming companion (monorepo). Phase 1 is only the Discord news collector
 - Secrets come from env (`DISCORD_BOT_TOKEN`, `SUPABASE_URL`, `SUPABASE_SECRET_KEY`), loaded from the repo-root `.env` when it exists. Never log or hardcode them.
 - Dedupe is by `content_hash` (sha256 of game id + normalized body). The first row seen wins (`ignore_duplicates`).
 - `collector_state` advances only after a successful upsert.
-- item_type: the origin channel name wins first, then keywords in the title, then keywords in the body.
+- item_type: the origin channel name wins first, then keywords in the title, then keywords in the body. Exception: maintenance and code keywords override the generic `#announcements` origin, but not more specific origins like `#secret-code` or `#dev-notes`.
 - Forwards (`message_snapshots`) don't carry the source channel name, so it comes from `origin_labels`.
 
 ## Git conventions

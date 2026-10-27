@@ -47,6 +47,9 @@ _KEYWORD_RULES: list[tuple[str, re.Pattern[str]]] = [
     ("dev-notes", re.compile(r"\bdev(?:eloper)?['’]?s?\s*notes?\b", re.I)),
     ("ama", re.compile(r"\bama\b|\bask\s+me\s+anything\b", re.I)),
 ]
+# Generic origin types that a more specific keyword type may refine.
+_GENERIC_ORIGIN_TYPES = {"announcements"}
+_REFINING_KEYWORD_TYPES = {"maintenance", "code"}
 
 
 def normalize_messages(
@@ -253,17 +256,32 @@ def resolve_origin(message: dict[str, Any], origin_labels: dict[str, str]) -> st
 
 
 def classify_item_type(origin: str, title: str, body: str) -> str:
-    """Origin channel name wins; then keywords in the title, then the body."""
+    """Origin channel name wins; then keywords in the title, then the body.
+
+    A generic origin (#announcements) is refined by maintenance/code keywords.
+    """
+    origin_type = _origin_type(origin)
+    keyword_type = _keyword_type(title, body)
+    if origin_type in _GENERIC_ORIGIN_TYPES and keyword_type in _REFINING_KEYWORD_TYPES:
+        return keyword_type
+    return origin_type or keyword_type or "other"
+
+
+def _origin_type(origin: str) -> str | None:
     channel = _origin_channel(origin)
     if channel:
         for item_type, pattern in _ORIGIN_CHANNEL_RULES:
             if pattern.search(channel):
                 return item_type
+    return None
+
+
+def _keyword_type(title: str, body: str) -> str | None:
     for text in (title, body):
         for item_type, pattern in _KEYWORD_RULES:
             if pattern.search(text):
                 return item_type
-    return "other"
+    return None
 
 
 def _origin_channel(origin: str) -> str:

@@ -158,9 +158,42 @@ class TestItemTypeMaintenance:
 
 
 class TestItemTypePrecedence:
-    def test_origin_label_beats_keywords(self):
-        body = "After maintenance, redeem code SORRY for compensation."
-        assert classify_item_type("VAMPIR Official Discord #dev-notes", "Notes", body) == "dev-notes"
+    @pytest.mark.parametrize(
+        ("origin", "expected"),
+        [
+            ("VAMPIR Official Discord #dev-notes", "dev-notes"),
+            ("Sword x Staff SEA #secret-code", "code"),
+        ],
+    )
+    def test_specific_origin_beats_keywords(self, origin, expected):
+        body = "Server maintenance tonight; use coupon SORRY afterwards."
+        assert classify_item_type(origin, "Notes", body) == expected
+
+    @pytest.mark.parametrize(
+        ("title", "expected"),
+        [
+            ("Emergency maintenance tonight", "maintenance"),
+            ("Redeem code: VAMP2026", "code"),
+        ],
+    )
+    def test_maintenance_and_code_keywords_refine_announcements(self, title, expected):
+        origin = "VAMPIR Official Discord #announcements"
+        assert classify_item_type(origin, title, "Details inside.") == expected
+
+    def test_other_keywords_do_not_override_announcements(self):
+        origin = "VAMPIR Official Discord #announcements"
+        assert classify_item_type(origin, "Dev Notes #13", "AMA next week") == "announcements"
+
+    def test_crossposted_maintenance_announcement(self, load_fixture, vampir):
+        message = load_fixture("plain_text")
+        message.update(
+            flags=2,
+            webhook_id="1100000000000000003",
+            author={"id": "1100000000000000003", "username": "VAMPIR Official Discord #announcements"},
+        )
+        item = normalize_message(message, vampir)
+        assert item.origin == "VAMPIR Official Discord #announcements"
+        assert item.item_type == "maintenance"
 
     def test_title_keywords_beat_body_keywords(self):
         title = "Coupon code giveaway"
