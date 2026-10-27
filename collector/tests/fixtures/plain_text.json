@@ -1,0 +1,26 @@
+{
+  "type": 0,
+  "content": "@here <@&1201234567890123456> Scheduled maintenance on <t:1793408400:f>\nServers will be down for about 2 hours. Compensation will be sent to all players.",
+  "mentions": [],
+  "mention_roles": ["1201234567890123456"],
+  "attachments": [],
+  "embeds": [],
+  "timestamp": "2026-10-27T09:15:00.000000+00:00",
+  "edited_timestamp": null,
+  "flags": 0,
+  "components": [],
+  "id": "1300000000000002900",
+  "channel_id": "1564545494984818739",
+  "author": {
+    "id": "900000000000000001",
+    "username": "jackund25",
+    "avatar": null,
+    "discriminator": "0",
+    "public_flags": 0,
+    "flags": 0,
+    "global_name": "Jack"
+  },
+  "pinned": false,
+  "mention_everyone": true,
+  "tts": false
+}

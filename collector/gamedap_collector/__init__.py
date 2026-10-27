@@ -1,0 +1,1 @@
+"""GameDap Discord news collector."""

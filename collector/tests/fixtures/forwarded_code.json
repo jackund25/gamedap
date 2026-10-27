@@ -1,0 +1,42 @@
+{
+  "type": 0,
+  "content": "",
+  "mentions": [],
+  "mention_roles": [],
+  "attachments": [],
+  "embeds": [],
+  "timestamp": "2026-10-27T12:00:00.000000+00:00",
+  "edited_timestamp": null,
+  "flags": 16384,
+  "components": [],
+  "id": "1300000000000003900",
+  "channel_id": "1564545523011158127",
+  "author": {
+    "id": "900000000000000001",
+    "username": "jackund25",
+    "discriminator": "0",
+    "global_name": "Jack"
+  },
+  "message_reference": {
+    "type": 1,
+    "channel_id": "1200000000000000022",
+    "message_id": "1300000000000003800",
+    "guild_id": "1200000000000000001"
+  },
+  "message_snapshots": [
+    {
+      "message": {
+        "type": 0,
+        "content": "<@&1209999999999999999>\n🎁 **SXSHALLOWEEN** 🎁\nValid until 2026-11-03. Enjoy, adventurers!",
+        "mentions": [],
+        "mention_roles": ["1209999999999999999"],
+        "attachments": [],
+        "embeds": [],
+        "timestamp": "2026-10-27T10:00:00.000000+00:00",
+        "edited_timestamp": null,
+        "flags": 0,
+        "components": []
+      }
+    }
+  ]
+}

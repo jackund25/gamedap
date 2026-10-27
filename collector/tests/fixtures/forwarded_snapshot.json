@@ -1,0 +1,58 @@
+{
+  "type": 0,
+  "content": "",
+  "mentions": [],
+  "mention_roles": [],
+  "attachments": [],
+  "embeds": [],
+  "timestamp": "2026-10-27T11:30:00.000000+00:00",
+  "edited_timestamp": null,
+  "flags": 16384,
+  "components": [],
+  "id": "1300000000000001900",
+  "channel_id": "1564545523011158127",
+  "author": {
+    "id": "900000000000000001",
+    "username": "jackund25",
+    "avatar": null,
+    "discriminator": "0",
+    "public_flags": 0,
+    "flags": 0,
+    "global_name": "Jack"
+  },
+  "pinned": false,
+  "mention_everyone": false,
+  "tts": false,
+  "message_reference": {
+    "type": 1,
+    "channel_id": "1200000000000000011",
+    "message_id": "1300000000000001800",
+    "guild_id": "1200000000000000001"
+  },
+  "message_snapshots": [
+    {
+      "message": {
+        "type": 0,
+        "content": "@everyone\n# Sword x Staff v1.4 Update\n\nNew class **Spellblade** is here! <:sxs_star:1234567890123456789>\n- New dungeon: Frost Hollow\n- Arena season 3\n\nRead more: https://sxs.example.com/news/v1-4.",
+        "mentions": [],
+        "mention_roles": [],
+        "attachments": [
+          {
+            "id": "1300000000000001801",
+            "filename": "v14_key_art.webp",
+            "size": 301122,
+            "url": "https://cdn.discordapp.com/attachments/1200000000000000011/1300000000000001801/v14_key_art.webp?ex=671f2a10&is=671dd890&hm=zzz",
+            "proxy_url": "https://media.discordapp.net/attachments/1200000000000000011/1300000000000001801/v14_key_art.webp",
+            "width": 1600,
+            "height": 900
+          }
+        ],
+        "embeds": [],
+        "timestamp": "2026-10-26T02:00:00.000000+00:00",
+        "edited_timestamp": null,
+        "flags": 0,
+        "components": []
+      }
+    }
+  ]
+}

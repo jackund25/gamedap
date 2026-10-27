@@ -1,0 +1,78 @@
+{
+  "type": 0,
+  "content": "<@&1201234567890123456> New dev notes are up! @everyone",
+  "mentions": [],
+  "mention_roles": [],
+  "attachments": [
+    {
+      "id": "1300000000000000901",
+      "filename": "guild_war_preview.png",
+      "size": 482113,
+      "url": "https://cdn.discordapp.com/attachments/1100000000000000001/1300000000000000901/guild_war_preview.png?ex=671f2a10&is=671dd890&hm=abc123",
+      "proxy_url": "https://media.discordapp.net/attachments/1100000000000000001/1300000000000000901/guild_war_preview.png?ex=671f2a10&is=671dd890&hm=abc123",
+      "width": 1920,
+      "height": 1080,
+      "content_type": "image/png"
+    },
+    {
+      "id": "1300000000000000902",
+      "filename": "patch_details.pdf",
+      "size": 90211,
+      "url": "https://cdn.discordapp.com/attachments/1100000000000000001/1300000000000000902/patch_details.pdf?ex=671f2a10&is=671dd890&hm=def456",
+      "proxy_url": "https://media.discordapp.net/attachments/1100000000000000001/1300000000000000902/patch_details.pdf",
+      "content_type": "application/pdf"
+    }
+  ],
+  "embeds": [
+    {
+      "type": "rich",
+      "url": "https://vampir.example.com/news/dev-notes-12",
+      "title": "Dev Notes #12: Guild War Rework",
+      "description": "Hello Lords of the Night!\n\nWe're reworking **Guild War** based on your feedback. Season starts <t:1793332800:F>.",
+      "color": 10038562,
+      "fields": [
+        { "name": "Matchmaking", "value": "Guilds are now matched by power tier.", "inline": false },
+        { "name": "Rewards", "value": "Season rewards increased by 20%.", "inline": true }
+      ],
+      "image": {
+        "url": "https://vampir.example.com/img/dev-notes-12-banner.jpg",
+        "proxy_url": "https://images-ext-1.discordapp.net/external/x/https/vampir.example.com/img/dev-notes-12-banner.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "thumbnail": {
+        "url": "https://vampir.example.com/img/logo.png",
+        "width": 256,
+        "height": 256
+      },
+      "footer": { "text": "VAMPIR Dev Team" },
+      "timestamp": "2026-10-27T08:00:00+00:00"
+    }
+  ],
+  "timestamp": "2026-10-27T08:00:12.345000+00:00",
+  "edited_timestamp": null,
+  "flags": 2,
+  "components": [],
+  "id": "1300000000000000900",
+  "channel_id": "1564545494984818739",
+  "author": {
+    "id": "1100000000000000002",
+    "username": "VAMPIR Official Discord #dev-notes",
+    "avatar": "a1b2c3",
+    "discriminator": "0000",
+    "public_flags": 0,
+    "flags": 0,
+    "bot": true,
+    "global_name": null
+  },
+  "pinned": false,
+  "mention_everyone": false,
+  "tts": false,
+  "webhook_id": "1100000000000000002",
+  "message_reference": {
+    "type": 0,
+    "channel_id": "1100000000000000001",
+    "message_id": "1300000000000000800",
+    "guild_id": "1000000000000000001"
+  }
+}
