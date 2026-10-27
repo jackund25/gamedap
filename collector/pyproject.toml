@@ -1,0 +1,4 @@
+# Tooling config only; the collector is run as a module, not installed.
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

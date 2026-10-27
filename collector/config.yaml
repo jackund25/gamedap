@@ -1,0 +1,16 @@
+# Games to collect. Each discord_channel_id is a channel in the private GameDap
+# server that receives official posts (Discord "Follow" crossposts or manual forwards).
+games:
+  - id: vampir
+    name: VAMPIR
+    discord_channel_id: "1564545494984818739"
+  - id: sxs
+    name: Sword x Staff
+    discord_channel_id: "1564545523011158127"
+
+# Labels for forwarded messages, keyed by the ORIGINAL source channel id.
+# Discord forwards don't carry the source channel name, so it is mapped here.
+# Entries whose key is still a <PLACEHOLDER> are ignored.
+origin_labels:
+  "<SXS_ANNOUNCEMENTS_CHANNEL_ID>": "Sword x Staff SEA #announcements"
+  "<SXS_SECRET_CODE_CHANNEL_ID>": "Sword x Staff SEA #secret-code"
